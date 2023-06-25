@@ -20,7 +20,7 @@
 
     "content_scripts": [{
         "js": [ "content.js" ],
-        "matches": [ "*://*/*" ]
+        "matches": [ "<all_urls>" ]
     }],
 
     "action": {
@@ -35,5 +35,10 @@
         }
     },
 
-    "permissions": [ ]
+    "permissions": [
+        "activeTab",
+        "tabs",
+        "storage",
+        "unlimitedStorage"
+    ]
 }

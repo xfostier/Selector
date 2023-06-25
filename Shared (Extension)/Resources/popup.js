@@ -15,7 +15,7 @@ code: '#A2A9B1'
 
 const sendColor = async (color) => {
 const [tab] = await browser.tabs.query({currentWindow: true, active: true})
-chrome.tabs.sendMessage(tab.id, { color })
+browser.tabs.sendMessage(tab.id, { color })
 }
 colors.forEach(color => {
 const button = document.createElement('button')
